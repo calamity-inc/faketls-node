@@ -1,0 +1,11 @@
+services:
+  dns:
+    image: ghcr.io/calamity-inc/faketls-dns
+    ports:
+      - "198.251.90.234:53:53/udp"
+      - "4269:4269"
+  http:
+    image: ghcr.io/calamity-inc/faketls-http
+    ports:
+      - 80:80
+      - 443:443
